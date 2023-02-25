@@ -1,18 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg' 
-import Container from './components/principales/Container'
-import Navbar from './components/principales/Navbar'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import Container from "./components/principales/Container";
+import Navbar from "./components/principales/Navbar";
 
-function App() {
-  const [count, setCount] = useState(0)
+function App(props:any) {
+  const [count, setCount] = useState(0);
 
   return (
     <>
       <Navbar />
-      <Container> 
+      <Container>
+        {props.children}
       </Container>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
