@@ -27,6 +27,7 @@ export const Root = (props: any) => {
                   path="/"
                   element={<Navigate to="/app/home" replace />}
                 />
+                <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
             </App>
           ) : (
@@ -40,13 +41,11 @@ export const Root = (props: any) => {
                   path="/"
                   element={<Navigate to="/app/login" replace />}
                 />
+                <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
             </AppEmtyp>
           )}
-
-          <Routes>
-            <Route path="**" element={<Navigate to="/" replace />} />
-          </Routes>
+ 
         </BrowserRouter>
       </QueryClientProvider>
     </React.StrictMode>
